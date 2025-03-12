@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+       
+        body {
+            background-color: #fff;
+            color: #000;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .logo {
+            max-width: 60px;
+            margin-bottom: 20px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .firm-info {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            text-align: right;
+            font-size: 14px;
+            font-weight: bold;
+            color: #145886;
+        }
+        .firm-info hr {
+            margin: 2px 0;
+            border: 0;
+            height: 1px;
+            background-color: #145886;
+        }
+        h1 {
+            font-size: 4rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(90deg, #33cc33, #3366ff, #ff3366);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p {
+            margin: 10px 0 20px;
+        }
+        .input-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        input {
+            padding: 10px;
+            width: 250px;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #145886;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .message {
+            margin-top: 10px;
+            display: none;
+            font-size: 16px;
+            color: #33cc33;
+        }
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-sizing: border-box;
+            font-size: 14px;
+            flex-wrap: wrap;
+        }
+        .left {
+            text-align: left;
+            flex: 1;
+        }
+        .right {
+            text-align: right;
+            flex: 1;
+        }
+    </style>
+    <script>
+        function notifyUser() {
+            var inputField = document.getElementById("emailInput");
+            var message = document.getElementById("message");
+           
+            if (inputField.value.trim() !== "") {
+                message.style.display = "block";
+                inputField.value = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="https://ibb.co/VWqr5xFH"><img src="https://i.ibb.co/gMRHhd0v/CA-India-Logo.png" alt="CA-India-Logo" border="0" class="logo"></a>
+    <div class="firm-info">
+        <p>JRB & ASSOCIATES</p>
+        <hr>
+        <p>CHARTERED ACCOUNTANTS</p>
+    </div>
+    <h1>Coming Soon</h1>
+    <p>Providing expert financial solutions, tax advisory, and business consulting to help you grow.</p>
+    <div class="input-container">
+        <input type="email" id="emailInput" placeholder="Please enter your email address">
+        <button onclick="notifyUser()">Notify Me</button>
+    </div>
+    <p id="message" class="message">You will be notified!</p>
+    <footer>
+        <p class="left">Privacy Policy</p>
+        <p class="right">Facebook / Instagram / LinkedIn</p>
+    </footer>
+</body>
+</html>
